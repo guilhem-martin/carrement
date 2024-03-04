@@ -63,7 +63,7 @@ for line in csv_file:
 
     forme = values[0]
 
-    image = Image.new("RGB", (700, 700), "white")
+    image = Image.new("RGB", (700, 450), "white")
 
     match forme:
         case "R":

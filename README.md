@@ -3,7 +3,7 @@
 
 "Carré ment" est une mini Intelligence Artificielle à dérouler manuellement à l'aide d'un matériel minimaliste.
 
-Une machine ne sait dessiner qu'un "coin", ⛶, et le positionner de 4 manières différentes.
+Une machine ne sait dessiner qu'un "coin", □ ⛶, et le positionner de 4 manières différentes.
 
 Elle ne sait pas faire de carré. On veut lui faire apprendre à faire des carrés en positionnant correctement ses coins.
 
@@ -20,6 +20,8 @@ Il vous faudra :
 - des perles de 4 couleurs différentes
 - 4 boites
 - 4 coins de carré, dessinés sur une feuille de papier
+
+![Coins](docs/coins.jpg "Coins")
 
 Disposition :
 
@@ -39,7 +41,7 @@ Tour de jeu :
 
 - Prendre une perle au hasard dans la première boite. Regardez la couleur et positionnez le dessin coin dans la case 1 du dessin.
 
-| h |  h  |
+| carré |   |
 |:--:|:--:|
 | **case 1** |  case 4 |
 | case 2 |  case 3 |
@@ -48,7 +50,7 @@ Si la forme est correcte, c'est-à-dire qu'elle permet de former un carré, reme
 
 - Prendre une perle au hasard dans la deuxième boite. Regardez la couleur et positionnez le dessin coin dans la case 2 du dessin.
 
-| h |  h  |
+| carré |    |
 |:--:|:--:|
 | case 1 |  case 4 |
 | **case 2** |  case 3 |
@@ -57,7 +59,7 @@ Si la forme est correcte, c'est-à-dire qu'elle permet de former un carré, reme
 
 - Prendre une perle au hasard dans la troisième boite. Regardez la couleur et positionnez le dessin coin dans la case 3 du dessin.
 
-| h |  h  |
+| carré |   |
 |:--:|:--:|
 | case 1 |  case 4 |
 | case 2 |  **case 3** |
@@ -66,12 +68,16 @@ Si la forme est correcte, c'est-à-dire qu'elle permet de former un carré, reme
 
  - Prendre une perle au hasard dans la quatrième boite. Regardez la couleur et positionnez le dessin coin dans la case 3 du dessin.
 
-| h |  h  |
+| carré |   |
 |:--:|:--:|
 | case 1 |  **case 4** |
 | case 2 |  case 3 |
 
 Si la forme est correcte, c'est-à-dire qu'elle permet de former un carré, remettez cette perle dans la quatrième boite. Si la forme est incorrecte, retirez la perle de la quatrième boite.
+
+Exemple d'un tour de jeu :
+
+![Carrément](docs/carrement.jpg "Carrément")
 
 Répétez les tours de jeu, de telle sorte que l'intelligence artificielle apprenne de plus en plus à former un carré.
 
@@ -86,7 +92,11 @@ Cela donne :
 
 > L;R;I;J
 
-Mettez autant de lignes que de tours de jeu.
+Mettez autant de lignes dans le CSV que de tours de jeu.
+
+Au bout d'un certain nombre de tours, l'IA fera de moins en moins de faux carrés, et de plus en plus de vrais carrés.
+
+![Carre4](docs/carre4.jpg "Carre4")
 
 ## Comment lancer le programme
 
@@ -100,4 +110,4 @@ Le fichier "animation.gif" est généré dans le répertoire "resultat". Vous po
 
 Ici, l'animation sur un exemple d'une partie :
 
-![Animation](resultat/animation.gif "Animation")
+![Animation](docs/animation.gif "Animation")
